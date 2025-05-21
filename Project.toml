@@ -1,0 +1,10 @@
+name = "PkgTemplates"
+uuid = "399f059a-15c8-4611-8d66-9fe0c419c7a9"
+authors = ["Fra <francescosbrana19@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+
+[compat]
+Revise = "3.7.6"
