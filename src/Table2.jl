@@ -14,9 +14,6 @@ module table2
 
     function do_table2(m)
 
-    #data_path= "/Users/fra/VS_CCA/Replication/PkgTemplates/data"
-    #output_path="/Users/fra/VS_CCA/Replication/PkgTemplates/output"
-
     function cycle_stats(df, stage; quintile_col=:inc_both, cohort=1)
         colnames = [:cost, :ln_cost, :inc, :ln_inc, :share,
                     :nhh, :birth_year, :group, :cndtl_cost,

@@ -33,11 +33,6 @@ end
 ##Lines from 27 to 82 2_cohort
 #----------------------------------------------------------------------------
 
-"""
-data_path= "/Users/fra/VS_CCA/Replication/PkgTemplates/data/"
-output_path="/Users/fra/VS_CCA/Replication/PkgTemplates/output/"
-"""	
-
 #Parameters
 alow = 40
 ahigh = 43

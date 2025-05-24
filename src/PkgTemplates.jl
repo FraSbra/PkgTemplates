@@ -45,10 +45,3 @@ module sbrana
     end
 end
 
-using FreqTables, LinearAlgebra, Printf, DataFramesMeta, Plots, DataFrames, StatFiles, StatsBase, CSV
-using FixedEffectModels, CategoricalArrays, ShiftedArrays, GLM, Random, Statistics, Econometrics
-using RegressionTables, WildBootTests, Distributions, PrettyTables, LaTeXStrings
-using StatsModels: coefnames 
-using Random: MersenneTwister
-
-

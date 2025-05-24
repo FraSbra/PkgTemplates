@@ -16,32 +16,6 @@ using LaTeXStrings
 
 function do_table3(m)
 
-#Pkg.add("StatsModels")
-"""
-Pkg.add("Econometrics")
-Pkg.add("ShiftedArrays")
-Pkg.add("DataFrames")
-Pkg.add("StatFiles")
-Pkg.add("StatsBase")
-Pkg.add("Statistics")
-
-Pkg.add("CSV")
-Pkg.add("FixedEffectModels")
-Pkg.add("CategoricalArrays")
-Pkg.add("PrettyTables")
-Pkg.add("RegressionTables")
-Pkg.add("WildBootTests")
-Pkg.add("Distributions")
-Pkg.add("PrettyTables")     
-Pkg.add("LaTeXStrings")
-"""
-
-# Load packages
-
-
-
-
-#funcspace
 # Assignment function
 function assign_curfews!(df)
     for row in eachrow(df)
@@ -189,20 +163,14 @@ function coef_se_cell(c, s)
 end
 
 #----------------------------------------
-# Set paths
-#----------------------------------------
-data_path= "/Users/fra/VS_CCA/Replication/PkgTemplates/data/"
-output_path="/Users/fra/VS_CCA/Replication/PkgTemplates/output/"
-
-#----------------------------------------
 # Load and merge data
 #----------------------------------------
 # Master dataset
-df = DataFrame(load(data_path*"data_clean.dta"))
+df = DataFrame(load(m*"/data/data_clean.dta"))
 # CPI for deflation
-df_cpi = DataFrame(load(data_path*"cpi.dta"))
+df_cpi = DataFrame(load(m*"/data/cpi.dta"))
 # Children
-df_school = DataFrame(load(data_path*"children_school.dta"))
+df_school = DataFrame(load(m*"/data/children_school.dta"))
 
 # Drop families with no children under head
 filter!(:n_child_head => x -> x != 0, df)
@@ -491,7 +459,7 @@ hl = [
 
 
 # Render table
-latex_path = output_path*"table3.tex"
+latex_path = m*"/output/table3.tex"
 
 open(latex_path, "w") do io
     println(io, "\\begin{center}")

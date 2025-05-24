@@ -14,6 +14,7 @@ Code can run for a while, in particular the estimation of the OLG model can be v
 
 - Download the GitHub Repo
 - Edit `src/PkgTemplates.jl` to change the directory: set "main_dir" to "yourdirectory/PkgTemplates"
+- activate your directory as main environment in your julia instance
 - Run `src/PkgTemplates.jl`  
 - In the julia command line run:
     - `using .sbrana`to load the package
